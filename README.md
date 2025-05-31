@@ -49,7 +49,7 @@ To run the project locally on your machine:
 
 ## 📂 Project Structure
 
-
+```bash
 /src
  ├── /app
  │    ├── /favorites         # Favorite Pokémon components
@@ -62,4 +62,4 @@ To run the project locally on your machine:
  ├── assets                  # Assets (images, icons, etc.)
  ├── environments            # Environment definitions
  └── index.html              # Main HTML file
-
+```
