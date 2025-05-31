@@ -47,7 +47,9 @@ To run the project locally on your machine:
    ```bash
    http://localhost:4200/
 
-## Project Structure
+## 📂 Project Structure
+
+
 /src
  ├── /app
  │    ├── /favorites         # Favorite Pokémon components
