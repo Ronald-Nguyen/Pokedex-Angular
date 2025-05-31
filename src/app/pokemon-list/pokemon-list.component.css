@@ -1,0 +1,28 @@
+p {
+    font-family: Lato;
+  }
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
+  .mat-button {
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+  }
+  
+  .mat-button:hover {
+    background-color: #FFA500; /* Grüne Farbe bei Hover */
+  }
+

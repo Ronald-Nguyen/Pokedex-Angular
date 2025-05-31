@@ -1,0 +1,61 @@
+<div style="text-align:left">
+    <h2>{{name}}</h2>
+</div>
+
+<table *ngIf="pokemon$ | async as pokemon">
+    <tr>
+      <th>Name</th>
+      <th>Sprite Front</th>
+      <th>Sprite Back</th>  
+      <th>weight</th>
+      <th>base experience</th>
+      <th>height</th>
+      <th>Abilities</th>
+      <th></th>
+      <th></th>
+    </tr>
+      <tr>              
+                <td>
+                {{ pokemon.name }}
+                </td>  
+                <td >
+                    <img [src]="pokemon.sprite_front" alt="{{ pokemon?.name }}">
+                </td>
+                <td >
+                    <img [src]="pokemon.sprite_back" alt="{{ pokemon?.name }}">
+                </td>
+                <td >
+                    {{ pokemon.weight }}0 g
+                </td>
+                <td >
+                    {{ pokemon.base_experience }}
+                </td>
+                <td >
+                    {{ pokemon.height }}0 cm
+                </td>
+        
+                <td>
+                    {{ pokemon.abilities }}
+                </td>
+                @if (pokemon && (isFavorite(pokemon) | async)) {
+                  <td>
+                    <button mat-icon-button color="warn" (click)="toggleFavorite(pokemon)">
+                      <mat-icon>thumb_up</mat-icon>
+                    </button>
+                  </td>
+                }
+                @else if(pokemon){
+                  <td>
+                    <button mat-icon-button color="primary" (click)="toggleFavorite(pokemon)">
+                      <mat-icon>thumb_down</mat-icon>
+                    </button>
+                  </td>
+                }
+                    
+                
+          
+    
+</table>
+
+
+  

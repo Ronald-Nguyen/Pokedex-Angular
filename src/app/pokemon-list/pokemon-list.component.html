@@ -1,0 +1,33 @@
+<div style="text-align:left">
+  <h2>List of Pokémon</h2>
+</div>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Sprite</th>
+    <th></th>
+  </tr>
+  
+  <!-- Schleife für jedes Pokémon -->
+  <tr *ngFor="let pokemon of pokemonList$ | async">
+    <!-- Überprüfen, ob der Name des Pokémon den Suchbegriff enthält -->
+    <td *ngIf="pokemon?.name?.includes(term)">
+      <button mat-raised-button class="mat-button" [routerLink]="['/pokemon-detail']" [queryParams]="{ name: pokemon.name }">
+        {{ pokemon?.name }}
+      </button>
+    </td>
+
+    <!-- Sprite des Pokémon anzeigen -->
+    <td *ngIf="pokemon?.name?.includes(term)">
+      <img [src]="pokemon?.sprite_front" alt="{{ pokemon.name }}">
+    </td>
+
+    <!-- Checkbox zum Hinzufügen/Entfernen von Favoriten -->
+    <td *ngIf="pokemon?.name?.includes(term)">
+      <mat-checkbox [checked]="(isFavorite(pokemon) | async)" (change)="toggleFavorite(pokemon)">
+        {{ (isFavorite(pokemon) | async) ? 'Liked' : 'Not Liked' }}
+      </mat-checkbox>
+    </td>
+  </tr>
+</table>

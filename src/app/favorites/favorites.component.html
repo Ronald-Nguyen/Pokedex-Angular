@@ -1,0 +1,32 @@
+
+<div style="display: flex; flex-direction: column;">
+  <div style="text-align:center">
+      <h1>Favorite Pokemon</h1>
+  </div>
+  
+  <div style="flex: 1 1 0%; overflow: auto;">
+  <table>
+      <tr>
+        <th>Name</th>
+        <th>Sprite</th>
+        <th>Dislike</th>
+      </tr>
+      <tr *ngFor="let pokemon of favoritePokemons$ | async">
+      <td>
+        <button mat-button class="mat-button" color="accent" [routerLink]="['/pokemon-detail']" [queryParams]="{ name: pokemon.name }">{{ pokemon?.name }}</button>
+      </td>
+  
+      <td>
+        <img [src]="pokemon?.sprite_front" alt="{{ pokemon.name }}">
+      </td>
+  
+      <td>
+        <button mat-button class="mat-button" (click)="toggleFavorite(pokemon)">
+          <mat-icon>thumb_down</mat-icon>
+        </button>
+      </td>
+  
+      </tr>
+  </table>
+  </div>
+</div>
