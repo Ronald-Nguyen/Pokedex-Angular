@@ -1,23 +1,23 @@
-# 🧭 Pokedex Angular
+# Pokedex Angular
 
 This is a **Pokédex web application** built with [Angular](https://angular.io/), [Angular Material](https://material.angular.io/), and [NgRx](https://ngrx.io/) for state management.  
 It fetches data from the public [PokeAPI](https://pokeapi.co/) and provides features such as listing, searching, and liking your favorite Pokémon.
 
-👉 [**Live Demo on StackBlitz**](https://stackblitz.com/~/github.com/Ronald-Nguyen/Pokedex-Angular)
+[**Live Demo on StackBlitz**](https://stackblitz.com/~/github.com/Ronald-Nguyen/Pokedex-Angular)
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔍 **Search Pokémon** by name
-- 📜 **List all Pokémon** from the [PokeAPI](https://pokeapi.co/)
-- 📄 **View detailed Pokémon information**
-- ❤️ **Like your favorite Pokémon**, which are added to a **Favorites list**
-- 🔄 **State management** implemented using **NgRx**
+-  **Search Pokémon** by name
+-  **List all Pokémon** from the [PokeAPI](https://pokeapi.co/)
+-  **View detailed Pokémon information**
+-  **Like your favorite Pokémon**, which are added to a **Favorites list**
+-  **State management** implemented using **NgRx**
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - [Angular](https://angular.io/)
 - [Angular Material](https://material.angular.io/)
@@ -27,7 +27,7 @@ It fetches data from the public [PokeAPI](https://pokeapi.co/) and provides feat
 
 ---
 
-## 🧪 Getting Started Locally
+## Getting Started Locally
 
 To run the project locally on your machine:
 
@@ -47,7 +47,7 @@ To run the project locally on your machine:
    ```bash
    http://localhost:4200/
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 /src
